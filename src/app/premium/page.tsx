@@ -110,7 +110,7 @@ export default function PremiumPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#080B09] pt-24 pb-20">
+    <div className="min-h-screen bg-[#0C0A0D] pt-24 pb-20">
       {/* Header */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -119,8 +119,8 @@ export default function PremiumPage() {
         className="max-w-7xl mx-auto px-6 mb-16"
       >
         <div className="flex items-center gap-3 mb-4">
-          <Crown className="w-8 h-8 text-[#D4AF37]" />
-          <h1 className="font-serif text-5xl md:text-6xl gold-gradient-text font-medium">Premium Membership</h1>
+          <Crown className="w-8 h-8 text-[#D48FB1]" />
+          <h1 className="font-serif text-5xl md:text-6xl rose-gold-gradient-text font-medium">Premium Membership</h1>
         </div>
         <p className="text-white/60 text-lg max-w-2xl">Unlock exclusive benefits and elevate your wellness journey with our premium experience.</p>
       </motion.div>
@@ -132,7 +132,7 @@ export default function PremiumPage() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="max-w-7xl mx-auto px-6 mb-20"
       >
-        <h2 className="font-serif text-3xl gold-gradient-text mb-8">Premium Benefits</h2>
+        <h2 className="font-serif text-3xl rose-gold-gradient-text mb-8">Premium Benefits</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {premiumBenefits.map((benefit, index) => (
             <motion.div
@@ -140,9 +140,9 @@ export default function PremiumPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              className="bg-[#0A1D16]/50 border border-[#D4AF37]/20 rounded-2xl p-6 hover:border-[#D4AF37]/40 transition-all"
+              className="bg-[#1A1518]/50 border border-[#D48FB1]/20 rounded-2xl p-6 hover:border-[#D48FB1]/40 transition-all"
             >
-              <div className="w-14 h-14 gold-gradient-bg rounded-xl flex items-center justify-center mb-4 text-[#080B09]">
+              <div className="w-14 h-14 rose-gold-gradient-bg rounded-xl flex items-center justify-center mb-4 text-[#0C0A0D]">
                 {benefit.icon}
               </div>
               <h3 className="text-white font-semibold text-xl mb-2">{benefit.title}</h3>
@@ -159,52 +159,52 @@ export default function PremiumPage() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="max-w-7xl mx-auto px-6 mb-20"
       >
-        <h2 className="font-serif text-3xl gold-gradient-text mb-8">Membership Plans</h2>
+        <h2 className="font-serif text-3xl rose-gold-gradient-text mb-8">Membership Plans</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Monthly Plan */}
-          <div className="bg-[#0A1D16]/50 border border-[#D4AF37]/20 rounded-2xl p-8 hover:border-[#D4AF37]/40 transition-all">
+          <div className="bg-[#1A1518]/50 border border-[#D48FB1]/20 rounded-2xl p-8 hover:border-[#D48FB1]/40 transition-all">
             <h3 className="text-white font-semibold text-2xl mb-2">Monthly Premium</h3>
             <div className="flex items-end gap-2 mb-6">
-              <span className="text-4xl font-bold gold-gradient-text">₹2,999</span>
+              <span className="text-4xl font-bold rose-gold-gradient-text">₹2,999</span>
               <span className="text-white/60 mb-2">/month</span>
             </div>
             <ul className="space-y-3 mb-8">
               {premiumBenefits.slice(0, 4).map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3 text-white/80">
-                  <CheckCircle2 className="w-5 h-5 text-[#D4AF37]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#D48FB1]" />
                   {benefit.title}
                 </li>
               ))}
             </ul>
             <button 
               onClick={() => setShowAuthModal(true)}
-              className="w-full gold-gradient-bg text-[#080B09] font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all"
+              className="w-full rose-gold-gradient-bg text-[#0C0A0D] font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(212,143,176,0.5)] transition-all"
             >
               Get Started <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
           {/* Annual Plan */}
-          <div className="bg-[#0A1D16]/50 border-2 border-[#D4AF37] rounded-2xl p-8 relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-[#D4AF37] text-[#080B09] text-xs font-bold px-3 py-1 rounded-full">
+          <div className="bg-[#1A1518]/50 border-2 border-[#D48FB1] rounded-2xl p-8 relative overflow-hidden">
+            <div className="absolute top-4 right-4 bg-[#D48FB1] text-[#0C0A0D] text-xs font-bold px-3 py-1 rounded-full">
               SAVE 20%
             </div>
             <h3 className="text-white font-semibold text-2xl mb-2">Annual Premium</h3>
             <div className="flex items-end gap-2 mb-6">
-              <span className="text-4xl font-bold gold-gradient-text">₹24,999</span>
+              <span className="text-4xl font-bold rose-gold-gradient-text">₹24,999</span>
               <span className="text-white/60 mb-2">/year</span>
             </div>
             <ul className="space-y-3 mb-8">
               {premiumBenefits.map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3 text-white/80">
-                  <CheckCircle2 className="w-5 h-5 text-[#D4AF37]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#D48FB1]" />
                   {benefit.title}
                 </li>
               ))}
             </ul>
             <button 
               onClick={() => setShowAuthModal(true)}
-              className="w-full gold-gradient-bg text-[#080B09] font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all"
+              className="w-full rose-gold-gradient-bg text-[#0C0A0D] font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(212,143,176,0.5)] transition-all"
             >
               Get Started <ArrowRight className="w-4 h-4" />
             </button>
@@ -220,7 +220,7 @@ export default function PremiumPage() {
         className="max-w-7xl mx-auto px-6"
       >
         <div className="flex items-center justify-between mb-8">
-          <h2 className="font-serif text-3xl gold-gradient-text">Choose Your Therapist</h2>
+          <h2 className="font-serif text-3xl rose-gold-gradient-text">Choose Your Therapist</h2>
           {!isAuthenticated && (
             <div className="flex items-center gap-2 text-white/60 text-sm">
               <Lock className="w-4 h-4" />
@@ -236,12 +236,12 @@ export default function PremiumPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 + parseInt(therapist.id) * 0.1 }}
-              className={`bg-[#0A1D16]/50 border rounded-2xl overflow-hidden transition-all cursor-pointer ${
+              className={`bg-[#1A1518]/50 border rounded-2xl overflow-hidden transition-all cursor-pointer ${
                 !isAuthenticated 
-                  ? 'border-[#D4AF37]/20 opacity-60' 
+                  ? 'border-[#D48FB1]/20 opacity-60' 
                   : selectedTherapist === therapist.id 
-                    ? 'border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.3)]' 
-                    : 'border-[#D4AF37]/20 hover:border-[#D4AF37]/40'
+                    ? 'border-[#D48FB1] shadow-[0_0_30px_rgba(212,143,176,0.3)]' 
+                    : 'border-[#D48FB1]/20 hover:border-[#D48FB1]/40'
               }`}
               onClick={() => handleTherapistSelect(therapist.id)}
             >
@@ -253,22 +253,22 @@ export default function PremiumPage() {
                       alt={therapist.name}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="absolute top-3 right-3 bg-[#080B09]/80 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1">
-                      <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                    <div className="absolute top-3 right-3 bg-[#0C0A0D]/80 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1">
+                      <Star className="w-4 h-4 text-[#D48FB1] fill-[#D48FB1]" />
                       <span className="text-white text-sm font-medium">{therapist.rating}</span>
                     </div>
                   </>
                 ) : (
-                  <div className="w-full h-48 bg-[#080B09] flex flex-col items-center justify-center border-b border-[#D4AF37]/20">
-                    <Lock className="w-12 h-12 text-[#D4AF37] mb-3" />
+                  <div className="w-full h-48 bg-[#0C0A0D] flex flex-col items-center justify-center border-b border-[#D48FB1]/20">
+                    <Lock className="w-12 h-12 text-[#D48FB1] mb-3" />
                     <p className="text-white/60 text-sm">Photo hidden</p>
-                    <p className="text-[#D4AF37]/60 text-xs mt-1">Unlock with premium token</p>
+                    <p className="text-[#D48FB1]/60 text-xs mt-1">Unlock with premium token</p>
                   </div>
                 )}
               </div>
               <div className="p-4">
                 <h3 className="text-white font-semibold text-lg mb-1">{therapist.name}</h3>
-                <p className="text-[#D4AF37] text-sm mb-2">{therapist.specialty}</p>
+                <p className="text-[#D48FB1] text-sm mb-2">{therapist.specialty}</p>
                 <div className="flex items-center justify-between text-white/60 text-sm">
                   <span>{therapist.experience}</span>
                   <span className={therapist.availability === 'Available Today' ? 'text-green-400' : ''}>
@@ -284,14 +284,14 @@ export default function PremiumPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-8 bg-[#0A1D16]/50 border border-[#D4AF37] rounded-2xl p-6"
+            className="mt-8 bg-[#1A1518]/50 border border-[#D48FB1] rounded-2xl p-6"
           >
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-white font-semibold text-xl mb-1">Therapist Selected</h3>
                 <p className="text-white/60">You can now proceed to booking with your preferred therapist</p>
               </div>
-              <button className="gold-gradient-bg text-[#080B09] font-semibold px-8 py-3 rounded-xl flex items-center gap-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all">
+              <button className="rose-gold-gradient-bg text-[#0C0A0D] font-semibold px-8 py-3 rounded-xl flex items-center gap-2 hover:shadow-[0_0_30px_rgba(212,143,176,0.5)] transition-all">
                 Book Now <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -313,11 +313,11 @@ export default function PremiumPage() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-[#0A1D16] border border-[#D4AF37]/20 rounded-2xl p-8 max-w-md w-full"
+              className="bg-[#1A1518] border border-[#D48FB1]/20 rounded-2xl p-8 max-w-md w-full"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-3 mb-6">
-                <Lock className="w-6 h-6 text-[#D4AF37]" />
+                <Lock className="w-6 h-6 text-[#D48FB1]" />
                 <h2 className="text-white font-serif text-2xl">Premium Access</h2>
               </div>
               
@@ -331,20 +331,20 @@ export default function PremiumPage() {
                     value={token}
                     onChange={(e) => setToken(e.target.value)}
                     placeholder="Enter your premium token"
-                    className="w-full bg-[#080B09]/50 border border-[#D4AF37]/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 transition-colors"
+                    className="w-full bg-[#0C0A0D]/50 border border-[#D48FB1]/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#D48FB1]/50 transition-colors"
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full gold-gradient-bg text-[#080B09] font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all"
+                  className="w-full rose-gold-gradient-bg text-[#0C0A0D] font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(212,143,176,0.5)] transition-all"
                 >
                   Unlock Premium <Crown className="w-4 h-4" />
                 </button>
               </form>
 
               <p className="text-white/40 text-sm mt-4 text-center">
-                Don't have a token? <span className="text-[#D4AF37] cursor-pointer hover:underline">Subscribe now</span>
+                Don&apos;t have a token? <span className="text-[#D48FB1] cursor-pointer hover:underline">Subscribe now</span>
               </p>
             </motion.div>
           </motion.div>

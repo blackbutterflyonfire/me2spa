@@ -276,10 +276,10 @@ export default function SpaLanding() {
     <div className="bg-[#121212] text-[#F8F9FA] overflow-x-hidden">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#080B09]/85 backdrop-blur-xl border-b border-[#D4AF37]/20 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0C0A0D]/85 backdrop-blur-xl border-b border-[#D48FB1]/20 py-4">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <svg className="w-8 h-8 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-8 h-8 text-[#D48FB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="5" r="2.5" fill="currentColor" stroke="none" />
               <path d="M12 9c-3.5 0-5 3.5-5 6 0 2.5 1.5 4 1.5 6 0 1-1 2-1 2" />
               <path d="M12 9c3.5 0 5 3.5 5 6 0 2.5-1.5 4-1.5 6 0 1 1 2 1 2" />
@@ -289,18 +289,18 @@ export default function SpaLanding() {
             <div className="font-serif text-xl tracking-widest font-semibold text-white">ME2SPA</div>
           </div>
           <div className="flex items-center gap-6 sm:gap-8 text-[10px] sm:text-xs font-semibold tracking-wider">
-            <a href="#services" className="text-white/70 hover:text-[#D4AF37] transition-colors hidden sm:block">SERVICES</a>
-            <a href="#premium" className="text-[#D4AF37] hover:text-white transition-colors">PREMIUM</a>
-            <button onClick={scrollToBooking} className="gold-gradient-bg text-[#080B09] px-4 sm:px-5 py-2 rounded-xl transition-transform hover:scale-105 cursor-pointer">BOOK NOW</button>
+            <a href="#services" className="text-white/70 hover:text-[#D48FB1] transition-colors hidden sm:block">SERVICES</a>
+            <a href="#premium" className="text-[#D48FB1] hover:text-white transition-colors">PREMIUM</a>
+            <button onClick={scrollToBooking} className="rose-gold-gradient-bg text-[#0C0A0D] px-4 sm:px-5 py-2 rounded-xl transition-transform hover:scale-105 cursor-pointer">BOOK NOW</button>
           </div>
         </div>
       </nav>
 
       {/* HERO SECTION WITH WRITINGS ON LEFT & PROMINENT 5S ROTATING MASSAGE IMAGE ON RIGHT */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-28 pb-20 bg-gradient-to-br from-[#091510] via-[#080B09] to-[#0A1D16] overflow-hidden">
+      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-28 pb-20 bg-gradient-to-br from-[#151018] via-[#0C0A0D] to-[#1A101D] overflow-hidden">
         {/* Ambient luxury light glows */}
-        <div className="absolute top-1/4 left-10 w-[500px] h-[500px] bg-[#D4AF37]/10 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#0A261C]/50 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/4 left-10 w-[500px] h-[500px] bg-[#D48FB1]/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#9E5A7D]/50 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
           {/* LEFT SIDE: WRITINGS & BUTTONS */}
@@ -310,14 +310,14 @@ export default function SpaLanding() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-6 text-left"
           >
-            <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs tracking-[2px] mb-6 border border-[#D4AF37]/30 text-[#D4AF37]">
+<div className="inline-flex items-center gap-2 bg-[#D48FB1]/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs tracking-[2px] mb-6 border border-[#D48FB1]/30 text-[#D48FB1]">
               <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_#10B981]"></div>
               ME2SPA • PREMIUM
             </div>
             
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-[1.15] tracking-tight mb-5">
               <span className="text-white">REJUVENATE</span><br />
-              <span className="gold-gradient-text font-normal italic">YOUR BODY &amp; MIND</span>
+              <span className="rose-gold-gradient-text font-normal italic">YOUR BODY & MIND</span>
             </h1>
             
             {/* Dynamic Slide Title Tag & Description */}
@@ -330,7 +330,7 @@ export default function SpaLanding() {
                 transition={{ duration: 0.4 }}
                 className="mb-8"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 text-[#D4AF37] text-xs tracking-[2px] uppercase font-semibold mb-3">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D48FB1]/15 border border-[#D48FB1]/40 text-[#D48FB1] text-xs tracking-[2px] uppercase font-semibold mb-3">
                   ✦ {heroMassageImages[currentHeroIndex].title} ✦
                 </div>
                 <p className="text-base md:text-lg text-white/80 font-light leading-relaxed max-w-lg">
@@ -342,7 +342,7 @@ export default function SpaLanding() {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <button 
                 onClick={scrollToBooking}
-                className="group px-4 py-2 gold-gradient-bg text-[#080B09] rounded-xl font-semibold text-xs flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.985] shadow-[0_0_30px_rgba(212,175,55,0.35)] cursor-pointer"
+                className="group px-4 py-2 rose-gold-gradient-bg text-[#0C0A0D] rounded-xl font-semibold text-xs flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.985] shadow-[0_0_30px_rgba(212,143,176,0.35)] cursor-pointer"
               >
                 BOOK YOUR EXPERIENCE
                 <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition" />
@@ -350,7 +350,7 @@ export default function SpaLanding() {
               
               <a 
                 href="#services" 
-                className="px-4 py-2 border border-[#D4AF37]/30 hover:border-[#D4AF37]/80 text-white rounded-xl text-xs font-medium flex items-center justify-center gap-1.5 transition-all hover:bg-[#D4AF37]/5"
+                className="px-4 py-2 border border-[#D48FB1]/30 hover:border-[#D48FB1]/80 text-white rounded-xl text-xs font-medium flex items-center justify-center gap-1.5 transition-all hover:bg-[#D48FB1]/5"
               >
                 EXPLORE THERAPIES
               </a>
@@ -358,7 +358,7 @@ export default function SpaLanding() {
             
             <div className="flex items-center gap-8 text-xs text-white/70 border-t border-white/10 pt-6">
               <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" /> <span className="font-semibold text-white">4.98</span> (2000+ Reviews)
+                <Star className="w-4 h-4 text-[#D48FB1] fill-[#D48FB1]" /> <span className="font-semibold text-white">4.98</span> (2000+ Reviews)
               </div>
               <div className="w-px h-4 bg-white/20"></div>
               <div className="tracking-wider uppercase text-[11px] text-white/60">PRIVATE • LUXURY • DISCREET</div>
@@ -373,7 +373,7 @@ export default function SpaLanding() {
             className="lg:col-span-6 relative"
           >
             {/* Framed Image Showcase */}
-            <div className="relative rounded-3xl overflow-hidden border border-[#D4AF37]/40 shadow-[0_0_50px_rgba(212,175,55,0.2)] bg-[#1A1A1A] group">
+            <div className="relative rounded-3xl overflow-hidden border border-[#D48FB1]/40 shadow-[0_0_50px_rgba(212,143,176,0.2)] bg-[#1A1A1A] group">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentHeroIndex}
@@ -396,7 +396,7 @@ export default function SpaLanding() {
               {/* Image Info Tag Overlay */}
               <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between z-10 pointer-events-none">
                 <div className="bg-black/60 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/15">
-                  <div className="text-xs text-[#D4AF37] font-semibold tracking-wider">
+                  <div className="text-xs text-[#D48FB1] font-semibold tracking-wider">
                     {heroMassageImages[currentHeroIndex].tag}
                   </div>
                   <div className="text-sm text-white font-light mt-0.5">
@@ -412,7 +412,7 @@ export default function SpaLanding() {
               {/* Prev/Next Arrow Buttons on Image */}
               <button
                 onClick={() => setCurrentHeroIndex((prev) => (prev === 0 ? heroMassageImages.length - 1 : prev - 1))}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-[#D4AF37] text-white hover:text-black border border-white/20 transition-all backdrop-blur-md cursor-pointer"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-[#D48FB1] text-white hover:text-black border border-white/20 transition-all backdrop-blur-md cursor-pointer"
                 aria-label="Previous Slide"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -420,7 +420,7 @@ export default function SpaLanding() {
 
               <button
                 onClick={() => setCurrentHeroIndex((prev) => (prev + 1) % heroMassageImages.length)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-[#D4AF37] text-white hover:text-black border border-white/20 transition-all backdrop-blur-md cursor-pointer"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-[#D48FB1] text-white hover:text-black border border-white/20 transition-all backdrop-blur-md cursor-pointer"
                 aria-label="Next Slide"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -436,7 +436,7 @@ export default function SpaLanding() {
                     onClick={() => setCurrentHeroIndex(idx)}
                     className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
                       currentHeroIndex === idx 
-                        ? 'w-7 bg-[#D4AF37] shadow-[0_0_8px_#D4AF37]' 
+                        ? 'w-7 bg-[#D48FB1] shadow-[0_0_8px_#D48FB1]' 
                         : 'w-2 bg-white/30 hover:bg-white/60'
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
@@ -459,28 +459,28 @@ export default function SpaLanding() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-[#0B1A13] py-5 border-y border-[#D4AF37]/20"
+        className="bg-[#1A1518] py-5 border-y border-[#D48FB1]/20"
       >
         <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-12 gap-y-4 text-xs font-medium tracking-wider uppercase opacity-90 text-white/80">
           <motion.div 
-            whileHover={{ scale: 1.05, color: "#D4AF37" }}
+            whileHover={{ scale: 1.05, color: "#D48FB1" }}
             className="flex items-center gap-3 transition-colors cursor-default"
           >
-            <Clock className="w-4 h-4 text-[#D4AF37]" />
+            <Clock className="w-4 h-4 text-[#D48FB1]" />
             <div>10:00 AM — 10:00 PM DAILY</div>
           </motion.div>
           <motion.div 
-            whileHover={{ scale: 1.05, color: "#D4AF37" }}
+            whileHover={{ scale: 1.05, color: "#D48FB1" }}
             className="flex items-center gap-3 transition-colors cursor-default"
           >
-            <MapPin className="w-4 h-4 text-[#D4AF37]" />
+            <MapPin className="w-4 h-4 text-[#D48FB1]" />
             <div>Kondotty, Malappuram</div>
           </motion.div>
           <motion.div 
-            whileHover={{ scale: 1.05, color: "#D4AF37" }}
+            whileHover={{ scale: 1.05, color: "#D48FB1" }}
             className="flex items-center gap-3 transition-colors cursor-default"
           >
-            <Phone className="w-4 h-4 text-[#D4AF37]" />
+            <Phone className="w-4 h-4 text-[#D48FB1]" />
             <div>+91 8086 777 555</div>
           </motion.div>
           <motion.div 
@@ -503,7 +503,7 @@ export default function SpaLanding() {
             className="flex flex-col md:flex-row gap-12 items-end mb-12"
           >
             <div className="flex-1">
-              <div className="uppercase text-[#D4AF37] tracking-[3px] text-xs mb-2">SIGNATURE EXPERIENCES</div>
+              <div className="uppercase text-[#D48FB1] tracking-[3px] text-xs mb-2">SIGNATURE EXPERIENCES</div>
               <h2 className="text-3xl md:text-4xl font-light tracking-tight leading-tight">Indulge in<br />our therapies</h2>
             </div>
             <div className="flex-1 max-w-md text-sm text-white/70">
@@ -519,9 +519,9 @@ export default function SpaLanding() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="service-card group bg-[#1A1A1A] border border-white/10 rounded-3xl p-7 flex flex-col hover:border-[#D4AF37]/30"
+                className="service-card group bg-[#1A1A1A] border border-white/10 rounded-3xl p-7 flex flex-col hover:border-[#D48FB1]/30"
               >
-                <div className="text-[#D4AF37] mb-6">{service.icon}</div>
+                <div className="text-[#D48FB1] mb-6">{service.icon}</div>
                 
                 <h3 className="text-xl font-light mb-3 tracking-tight">{service.title}</h3>
                 
@@ -536,14 +536,14 @@ export default function SpaLanding() {
                   </div>
                   <div className="text-right">
                     <div className="text-[10px] text-white/40 uppercase">FROM</div>
-                    <div className="text-2xl font-light text-[#D4AF37] mt-0.5 tracking-tight">{service.price}</div>
+                    <div className="text-2xl font-light text-[#D48FB1] mt-0.5 tracking-tight">{service.price}</div>
                   </div>
                 </div>
 
                 
                 <button 
                   onClick={scrollToBooking}
-                  className="mt-8 text-xs border border-white/30 hover:border-[#D4AF37] text-white/70 hover:text-white transition-colors py-4 rounded-2xl flex items-center justify-center gap-2 tracking-wider"
+                  className="mt-8 text-xs border border-white/30 hover:border-[#D48FB1] text-white/70 hover:text-white transition-colors py-4 rounded-2xl flex items-center justify-center gap-2 tracking-wider"
                 >
                   SELECT THIS EXPERIENCE
                 </button>
@@ -554,36 +554,36 @@ export default function SpaLanding() {
       </section>
 
       {/* PREMIUM BENEFITS & OFFERS SECTION */}
-      <section id="premium" className="py-24 bg-[#0A1A12] border-y border-[#D4AF37]/20 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none" />
+      <section id="premium" className="py-24 bg-[#151018] border-y border-[#D48FB1]/20 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#D48FB1]/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline text-[11px] font-semibold tracking-[3px] bg-[#D4AF37]/10 border border-[#D4AF37]/30 px-5 py-1.5 rounded-full gold-gradient-text uppercase">ME2SPA EXCLUSIVE</div>
-            <h2 className="font-serif text-3xl md:text-5xl font-light mt-6 tracking-tight mb-4">The <span className="italic gold-gradient-text">Premium</span> Package</h2>
+            <div className="inline text-[11px] font-semibold tracking-[3px] bg-[#D48FB1]/10 border border-[#D48FB1]/30 px-5 py-1.5 rounded-full rose-gold-gradient-text uppercase">ME2SPA EXCLUSIVE</div>
+            <h2 className="font-serif text-3xl md:text-5xl font-light mt-6 tracking-tight mb-4">The <span className="italic rose-gold-gradient-text">Premium</span> Package</h2>
             <p className="text-white/70 max-w-lg mx-auto leading-relaxed">Elevate your wellness journey with our highly sought-after premium memberships. Experience unparalleled luxury and bespoke treatments.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Benefits */}
-            <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-[#D4AF37]/40 transition-colors">
-              <h3 className="text-xl font-medium text-white mb-6 uppercase tracking-widest text-[#D4AF37]">Key Benefits</h3>
+            <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-[#D48FB1]/40 transition-colors">
+              <h3 className="text-xl font-medium text-white mb-6 uppercase tracking-widest text-[#D48FB1]">Key Benefits</h3>
               <ul className="space-y-5">
                 <li className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] shrink-0 mt-0.5">✦</div>
+                  <div className="w-6 h-6 rounded-full bg-[#D48FB1]/20 flex items-center justify-center text-[#D48FB1] shrink-0 mt-0.5">✦</div>
                   <div>
                     <strong className="block text-white mb-1">Priority Therapist Selection</strong>
                     <span className="text-sm text-white/60">Choose your preferred therapist and secure guaranteed priority bookings, even during peak hours.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] shrink-0 mt-0.5">✦</div>
+                  <div className="w-6 h-6 rounded-full bg-[#D48FB1]/20 flex items-center justify-center text-[#D48FB1] shrink-0 mt-0.5">✦</div>
                   <div>
                     <strong className="block text-white mb-1">Complimentary Enhancements</strong>
                     <span className="text-sm text-white/60">Free hot stone add-ons, premium aromatic oils, and extended 15-minute relaxation periods.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] shrink-0 mt-0.5">✦</div>
+                  <div className="w-6 h-6 rounded-full bg-[#D48FB1]/20 flex items-center justify-center text-[#D48FB1] shrink-0 mt-0.5">✦</div>
                   <div>
                     <strong className="block text-white mb-1">Exclusive Private Suites</strong>
                     <span className="text-sm text-white/60">Access to our VIP suites featuring private showers and ultimate soundproofing.</span>
@@ -593,26 +593,26 @@ export default function SpaLanding() {
             </div>
 
             {/* Offers */}
-            <div className="bg-gradient-to-br from-[#151515] to-[#0A0A0A] rounded-3xl p-8 border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(212,175,55,0.1)] relative">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-bl-full blur-[30px]" />
-              <h3 className="text-xl font-medium text-white mb-6 uppercase tracking-widest text-[#D4AF37]">Current Offers</h3>
+            <div className="bg-gradient-to-br from-[#151515] to-[#0A0A0A] rounded-3xl p-8 border border-[#D48FB1]/30 shadow-[0_0_30px_rgba(212,143,176,0.1)] relative">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D48FB1]/10 rounded-bl-full blur-[30px]" />
+              <h3 className="text-xl font-medium text-white mb-6 uppercase tracking-widest text-[#D48FB1]">Current Offers</h3>
               
               <div className="space-y-6">
                 <div className="border border-white/5 bg-white/5 rounded-2xl p-5 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 bg-[#D4AF37] text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
+                  <div className="absolute top-0 right-0 bg-[#D48FB1] text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
                   <div className="text-2xl font-serif text-white mb-1">Gold Membership</div>
-                  <div className="text-sm text-[#D4AF37] font-medium mb-3">₹4,999 / month</div>
+                  <div className="text-sm text-[#D48FB1] font-medium mb-3">₹4,999 / month</div>
                   <div className="text-sm text-white/60">Includes 4 Full Body Massages + 2 Cross Massages and all Premium benefits. Save 30%.</div>
                 </div>
 
                 <div className="border border-white/5 bg-white/5 rounded-2xl p-5">
                   <div className="text-2xl font-serif text-white mb-1">Annual Premium</div>
-                  <div className="text-sm text-[#D4AF37] font-medium mb-3">₹49,999 / year</div>
+                  <div className="text-sm text-[#D48FB1] font-medium mb-3">₹49,999 / year</div>
                   <div className="text-sm text-white/60">Unlimited access to all facilities, complimentary add-ons, and personal concierge service.</div>
                 </div>
               </div>
 
-              <button onClick={scrollToBooking} className="w-full mt-8 py-4 bg-[#D4AF37] text-black font-semibold rounded-xl tracking-wider hover:bg-white transition-colors cursor-pointer text-sm">
+              <button onClick={scrollToBooking} className="w-full mt-8 py-4 bg-[#D48FB1] text-black font-semibold rounded-xl tracking-wider hover:bg-white transition-colors cursor-pointer text-sm">
                 CLAIM PREMIUM OFFER
               </button>
             </div>
@@ -621,8 +621,8 @@ export default function SpaLanding() {
       </section>
 
       {/* ULTRA PREMIUM CATEGORY */}
-      <section id="ultra-premium" className="py-24 bg-[#080B09] border-y border-white/5 relative">
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#D4AF37]/10 via-[#080B09]/0 to-[#080B09]/0 pointer-events-none" />
+      <section id="ultra-premium" className="py-24 bg-[#0C0A0D] border-y border-white/5 relative">
+        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#D48FB1]/10 via-[#0C0A0D]/0 to-[#0C0A0D]/0 pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -632,7 +632,7 @@ export default function SpaLanding() {
             className="flex flex-col md:flex-row gap-12 items-end mb-12"
           >
             <div className="flex-1">
-              <div className="uppercase text-[#D4AF37] tracking-[3px] text-xs mb-2">ULTRA PREMIUM CATEGORY</div>
+              <div className="uppercase text-[#D48FB1] tracking-[3px] text-xs mb-2">ULTRA PREMIUM CATEGORY</div>
               <h2 className="text-3xl md:text-4xl font-light tracking-tight leading-tight">NFC Card<br />Holders</h2>
             </div>
             <div className="flex-1 max-w-md text-sm text-white/70">
@@ -648,11 +648,11 @@ export default function SpaLanding() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A] border border-[#D4AF37]/20 rounded-3xl p-8 flex flex-col hover:border-[#D4AF37]/60 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.05)] hover:shadow-[0_0_40px_rgba(212,175,55,0.15)]"
+                className="group bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A] border border-[#D48FB1]/20 rounded-3xl p-8 flex flex-col hover:border-[#D48FB1]/60 transition-all duration-300 shadow-[0_0_20px_rgba(212,143,176,0.05)] hover:shadow-[0_0_40px_rgba(212,143,176,0.15)]"
               >
-                <div className="text-[#D4AF37] mb-6 flex items-center justify-between">
+                <div className="text-[#D48FB1] mb-6 flex items-center justify-between">
                   {service.icon}
-                  <div className="text-[10px] tracking-[2px] border border-[#D4AF37]/30 px-3 py-1 rounded-full uppercase text-[#D4AF37]">INVITE ONLY</div>
+                  <div className="text-[10px] tracking-[2px] border border-[#D48FB1]/30 px-3 py-1 rounded-full uppercase text-[#D48FB1]">INVITE ONLY</div>
                 </div>
                 
                 <h3 className="text-2xl font-serif mb-4 tracking-tight text-white">{service.title}</h3>
@@ -668,13 +668,13 @@ export default function SpaLanding() {
                   </div>
                   <div className="text-right">
                     <div className="text-[10px] text-white/40 uppercase">INVESTMENT</div>
-                    <div className="text-2xl font-serif text-[#D4AF37] mt-0.5 tracking-tight">{service.price}</div>
+                    <div className="text-2xl font-serif text-[#D48FB1] mt-0.5 tracking-tight">{service.price}</div>
                   </div>
                 </div>
 
                 <button 
                   onClick={scrollToBooking}
-                  className="w-full text-xs font-semibold bg-[#D4AF37] hover:bg-white text-black transition-colors py-4 rounded-xl flex items-center justify-center gap-2 tracking-widest uppercase"
+                  className="w-full text-xs font-semibold bg-[#D48FB1] hover:bg-white text-black transition-colors py-4 rounded-xl flex items-center justify-center gap-2 tracking-widest uppercase"
                 >
                   REQUEST ACCESS
                 </button>
@@ -685,12 +685,12 @@ export default function SpaLanding() {
       </section>
 
       {/* INTERACTIVE BOOKING WIZARD */}
-      <section id="booking-wizard" className="bg-gradient-to-b from-[#0B1A13] via-[#080B09] to-[#080B09] py-24 relative overflow-hidden">
+      <section id="booking-wizard" className="bg-gradient-to-b from-[#1A1518] via-[#0C0A0D] to-[#0C0A0D] py-24 relative overflow-hidden">
         {/* Subtle background animations */}
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-40 -right-40 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[100px]"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-[#D48FB1]/5 rounded-full blur-[100px]"
         />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div 
@@ -700,8 +700,8 @@ export default function SpaLanding() {
             transition={{ duration: 0.5 }}
             className="text-center mb-14"
           >
-            <div className="inline text-[11px] font-semibold tracking-[3px] bg-[#D4AF37]/10 border border-[#D4AF37]/30 px-5 py-1.5 rounded-full gold-gradient-text uppercase">EXCLUSIVE FOR YOU</div>
-            <h2 className="font-serif text-3xl md:text-4xl font-light mt-4 tracking-tight">Begin your <span className="italic gold-gradient-text">journey</span></h2>
+            <div className="inline text-[11px] font-semibold tracking-[3px] bg-[#D48FB1]/10 border border-[#D48FB1]/30 px-5 py-1.5 rounded-full rose-gold-gradient-text uppercase">EXCLUSIVE FOR YOU</div>
+            <h2 className="font-serif text-3xl md:text-4xl font-light mt-4 tracking-tight">Begin your <span className="italic rose-gold-gradient-text">journey</span></h2>
             <p className="text-sm text-white/60 font-light max-w-xs mx-auto mt-2">Our expert team will match you with the perfect therapist based on your preferences</p>
           </motion.div>
 
@@ -715,9 +715,9 @@ export default function SpaLanding() {
                     setCurrentStep(step);
                   }
                 }}
-                className={`step-dot cursor-pointer flex flex-col items-center relative z-10 ${currentStep >= step ? 'text-[#D4AF37]' : 'text-white/30'}`}
+                className={`step-dot cursor-pointer flex flex-col items-center relative z-10 ${currentStep >= step ? 'text-[#D48FB1]' : 'text-white/30'}`}
               >
-                <div className={`w-9 h-9 flex items-center justify-center rounded-xl text-sm font-medium border-2 transition-all ${currentStep >= step ? 'border-[#D4AF37] gold-gradient-bg text-[#080B09] shadow-[0_0_15px_rgba(212,175,55,0.3)]' : 'border-white/20 bg-[#080B09]'}`}>
+                <div className={`w-9 h-9 flex items-center justify-center rounded-xl text-sm font-medium border-2 transition-all ${currentStep >= step ? 'border-[#D48FB1] rose-gold-gradient-bg text-[#0C0A0D] shadow-[0_0_15px_rgba(212,143,176,0.3)]' : 'border-white/20 bg-[#0C0A0D]'}`}>
                   {step}
                 </div>
                 <div className="text-[10px] mt-2.5 font-semibold tracking-widest uppercase">STEP {step}</div>
@@ -727,13 +727,13 @@ export default function SpaLanding() {
             {/* Progress line */}
             <div className="absolute top-4.5 left-0 right-0 h-[2px] bg-white/10">
               <div 
-                className="h-[2px] gold-gradient-bg transition-all duration-700 shadow-[0_0_10px_#D4AF37]" 
+                className="h-[2px] rose-gold-gradient-bg transition-all duration-700 shadow-[0_0_10px_#D48FB1]" 
                 style={{ width: `${((currentStep - 1) / 3) * 100}%` }}
               />
             </div>
           </div>
 
-          <div className="glass-card rounded-3xl p-8 md:p-14 shadow-2xl border border-[#D4AF37]/25">
+          <div className="glass-card rounded-3xl p-8 md:p-14 shadow-2xl border border-[#D48FB1]/25">
             <form onSubmit={handleSubmit}>
               <AnimatePresence mode="wait">
                 {/* STEP 1: SERVICE SELECTION */}
@@ -746,7 +746,7 @@ export default function SpaLanding() {
                     className="space-y-6"
                   >
                     <div>
-                      <div className="uppercase text-xs tracking-widest text-[#D4AF37] mb-1">STEP 01 — SERVICE</div>
+                      <div className="uppercase text-xs tracking-widest text-[#D48FB1] mb-1">STEP 01 — SERVICE</div>
                       <h3 className="text-2xl font-light">Choose your therapy</h3>
                     </div>
                     
@@ -757,13 +757,13 @@ export default function SpaLanding() {
                           onClick={() => updateForm('service', service.id)}
                           className={`service-card flex gap-5 border-2 p-5 rounded-2xl cursor-pointer group ${formData.service === service.id ? 'selected' : 'border-white/10 hover:border-white/30'}`}
                         >
-                          <div className="text-[#D4AF37] mt-1 transition-transform group-hover:scale-110">
+                          <div className="text-[#D48FB1] mt-1 transition-transform group-hover:scale-110">
                             {service.icon}
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center justify-between">
                               <div className="text-lg font-light">{service.title}</div>
-                              <div className="font-mono text-[#D4AF37] text-base">{service.price}</div>
+                              <div className="font-mono text-[#D48FB1] text-base">{service.price}</div>
                             </div>
                             <div className="text-sm text-white/60 mt-1 pr-8">{service.description}</div>
                             <div className="text-xs text-white/50 mt-4 flex items-center gap-3">
@@ -782,7 +782,7 @@ export default function SpaLanding() {
                       <button
                         type="button"
                         onClick={nextStep}
-                        className="flex items-center gap-2 bg-white text-black px-10 py-3.5 rounded-xl font-medium text-sm hover:bg-[#D4AF37] transition-all active:scale-95"
+                        className="flex items-center gap-2 bg-white text-black px-10 py-3.5 rounded-xl font-medium text-sm hover:bg-[#D48FB1] transition-all active:scale-95"
                       >
                         CONTINUE <ArrowRight className="w-4 h-4" />
                       </button>
@@ -800,7 +800,7 @@ export default function SpaLanding() {
                     className="space-y-8"
                   >
                     <div>
-                      <div className="uppercase text-xs tracking-widest text-[#D4AF37] mb-1">STEP 02 — PREFERENCES</div>
+                      <div className="uppercase text-xs tracking-widest text-[#D48FB1] mb-1">STEP 02 — PREFERENCES</div>
                       <h3 className="text-2xl font-light tracking-tight">Tell us who you prefer</h3>
                     </div>
 
@@ -814,7 +814,7 @@ export default function SpaLanding() {
                           <div 
                             key={option.value}
                             onClick={() => toggleBodyType(option.value)}
-                            className={`border-2 rounded-2xl py-6 text-center cursor-pointer transition-all hover:border-[#D4AF37]/60 ${formData.bodyTypes.includes(option.value) ? 'border-[#D4AF37] bg-[#1F2A26]' : 'border-white/10'}`}
+                            className={`border-2 rounded-2xl py-6 text-center cursor-pointer transition-all hover:border-[#D48FB1]/60 ${formData.bodyTypes.includes(option.value) ? 'border-[#D48FB1] bg-[#2A1F26]' : 'border-white/10'}`}
                           >
                             <div className="text-3xl mb-2">{option.emoji}</div>
                             <div className="font-medium text-sm">{option.label}</div>
@@ -833,7 +833,7 @@ export default function SpaLanding() {
                           <div 
                             key={option.value}
                             onClick={() => updateForm('ethnicity', option.value)}
-                            className={`p-6 border-2 rounded-2xl flex flex-col items-center cursor-pointer transition-all ${formData.ethnicity === option.value ? 'selected border-[#D4AF37]' : 'border-white/10 hover:border-white/30'}`}
+                            className={`p-6 border-2 rounded-2xl flex flex-col items-center cursor-pointer transition-all ${formData.ethnicity === option.value ? 'selected border-[#D48FB1]' : 'border-white/10 hover:border-white/30'}`}
                           >
                             <div className="text-4xl mb-3">{option.flag}</div>
                             <div className="text-lg font-light mb-1">{option.label}</div>
@@ -856,7 +856,7 @@ export default function SpaLanding() {
                       <button
                         type="button"
                         onClick={nextStep}
-                        className="flex items-center gap-3 bg-white text-black px-14 py-5 rounded-2xl font-medium hover:bg-[#D4AF37] transition-all active:scale-95"
+                        className="flex items-center gap-3 bg-white text-black px-14 py-5 rounded-2xl font-medium hover:bg-[#D48FB1] transition-all active:scale-95"
                       >
                         NEXT: YOUR DETAILS <ArrowRight />
                       </button>
@@ -874,7 +874,7 @@ export default function SpaLanding() {
                     className="space-y-8"
                   >
                     <div>
-                      <div className="uppercase text-xs tracking-widest text-[#D4AF37] mb-3">STEP 03 — CONTACT</div>
+                      <div className="uppercase text-xs tracking-widest text-[#D48FB1] mb-3">STEP 03 — CONTACT</div>
                       <h3 className="text-4xl font-light">Almost there...</h3>
                       <p className="text-white/60 mt-3">Your information is kept completely private and secure.</p>
                     </div>
@@ -886,7 +886,7 @@ export default function SpaLanding() {
                           type="text"
                           value={formData.name}
                           onChange={(e) => updateForm('name', e.target.value)}
-                          className="w-full bg-transparent border border-white/30 focus:border-[#D4AF37] rounded-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
+                          className="w-full bg-transparent border border-white/30 focus:border-[#D48FB1] rounded-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
                           placeholder="Aarav Menon"
                         />
                         {errors.name && <p className="text-red-400 text-xs mt-2">{errors.name}</p>}
@@ -900,7 +900,7 @@ export default function SpaLanding() {
                             value={formData.age}
                             onChange={(e) => updateForm('age', e.target.value)}
                             min="18"
-                            className="w-full bg-transparent border border-white/30 focus:border-[#D4AF37] rounded-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
+                            className="w-full bg-transparent border border-white/30 focus:border-[#D48FB1] rounded-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
                             placeholder="28"
                           />
                           {errors.age && <p className="text-red-400 text-xs mt-2">{errors.age}</p>}
@@ -911,7 +911,7 @@ export default function SpaLanding() {
                             type="text"
                             value={formData.location}
                             onChange={(e) => updateForm('location', e.target.value)}
-                            className="w-full bg-transparent border border-white/30 focus:border-[#D4AF37] rounded-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
+                            className="w-full bg-transparent border border-white/30 focus:border-[#D48FB1] rounded-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
                             placeholder="Your city"
                           />
                           {errors.location && <p className="text-red-400 text-xs mt-2">{errors.location}</p>}
@@ -926,7 +926,7 @@ export default function SpaLanding() {
                             type="tel"
                             value={formData.mobile}
                             onChange={(e) => updateForm('mobile', e.target.value)}
-                            className="flex-1 bg-transparent border border-white/30 focus:border-[#D4AF37] rounded-r-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
+                            className="flex-1 bg-transparent border border-white/30 focus:border-[#D48FB1] rounded-r-2xl px-7 py-5 text-lg placeholder:text-white/30 outline-none transition-colors"
                             placeholder="8086 777 555"
                           />
                         </div>
@@ -942,17 +942,17 @@ export default function SpaLanding() {
                       >
                         BACK
                       </button>
-                      <button
+<button
                         type="submit"
-                        className="flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#E8C670] text-black px-16 py-6 rounded-3xl font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/40 transition-all active:scale-[0.985]"
+                        className="flex items-center gap-3 bg-gradient-to-r from-[#D48FB1] to-[#C87B9A] text-black px-16 py-6 rounded-3xl font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-[#D48FB1]/40 transition-all active:scale-[0.985]"
                       >
-                        CONFIRM &amp; RESERVE SESSION
+                        CONFIRM & RESERVE SESSION
                       </button>
                     </div>
                   </motion.div>
                 )}
 
-                {/* STEP 4: REVIEW (Confirmation preview) */}
+{/* STEP 4: REVIEW (Confirmation preview) */}
                 {currentStep === 4 && (
                   <motion.div
                     key="step4"
@@ -961,7 +961,7 @@ export default function SpaLanding() {
                     exit={{ opacity: 0, x: -30 }}
                     className="space-y-8 text-center"
                   >
-                    <CheckCircle2 className="mx-auto text-[#D4AF37] w-20 h-20" />
+                    <CheckCircle2 className="mx-auto text-[#D48FB1] w-20 h-20" />
                     <div>
                       <div className="text-4xl font-light mb-1">Review your request</div>
                       <p className="text-white/60">Please confirm all details before submitting.</p>
@@ -972,7 +972,7 @@ export default function SpaLanding() {
                         <div className="text-white/50 text-sm">SELECTED THERAPY</div>
                         <div className="text-right">
                           <div className="font-medium text-lg">{services.find(s => s.id === formData.service)?.title}</div>
-                          <div className="text-[#D4AF37]">{services.find(s => s.id === formData.service)?.price}</div>
+                          <div className="text-[#D48FB1]">{services.find(s => s.id === formData.service)?.price}</div>
                         </div>
                       </div>
                       
@@ -990,7 +990,7 @@ export default function SpaLanding() {
                           <div className="mt-1">{formData.name || '—'}</div>
                         </div>
                         <div>
-                          <div className="text-white/50">AGE &amp; PLACE</div>
+                          <div className="text-white/50">AGE & PLACE</div>
                           <div className="mt-1">{formData.age} • {formData.location}</div>
                         </div>
                       </div>
@@ -1006,7 +1006,7 @@ export default function SpaLanding() {
                       </button>
                       <button
                         type="submit"
-                        className="bg-[#D4AF37] text-black px-16 py-5 rounded-3xl font-medium flex items-center gap-3 hover:bg-white transition-colors"
+                        className="bg-[#D48FB1] text-black px-16 py-5 rounded-3xl font-medium flex items-center gap-3 hover:bg-white transition-colors"
                       >
                         YES, SUBMIT MY REQUEST
                       </button>
@@ -1017,18 +1017,18 @@ export default function SpaLanding() {
                     </div>
                   </motion.div>
                 )}
-              </AnimatePresence>
+</AnimatePresence>
             </form>
           </div>
         </div>
       </section>
 
       {/* ABOUT / TRUST SECTION */}
-      <section id="about" className="py-24 bg-[#080B09] border-t border-white/5 relative overflow-hidden">
+      <section id="about" className="py-24 bg-[#0C0A0D] border-t border-white/5 relative overflow-hidden">
         <motion.div 
           animate={{ x: [0, 50, 0], y: [0, 30, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 -left-20 w-80 h-80 bg-emerald-900/10 rounded-full blur-[120px]"
+          className="absolute top-1/3 -left-20 w-80 h-80 bg-rose-900/10 rounded-full blur-[120px]"
         />
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center relative z-10">
           <motion.div 
@@ -1039,8 +1039,8 @@ export default function SpaLanding() {
             className="md:col-span-7"
           >
             <div className="sticky top-28">
-              <div className="uppercase tracking-[3px] text-xs font-semibold gold-gradient-text">OUR SANCTUARY IN KONDOTTY</div>
-              <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight leading-snug mt-4">A private retreat designed for <span className="italic gold-gradient-text">absolute comfort</span> &amp; rejuvenation.</h2>
+              <div className="uppercase tracking-[3px] text-xs font-semibold rose-gold-gradient-text">OUR SANCTUARY IN KONDOTTY</div>
+              <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight leading-snug mt-4">A private retreat designed for <span className="italic rose-gold-gradient-text">absolute comfort</span> & rejuvenation.</h2>
               
               <div className="mt-6 max-w-md text-base text-white/75 font-light leading-relaxed">
                 Located in a serene corner of Kondotty, Wellness Spa offers a completely private and luxurious environment where you can unwind without any distractions.
@@ -1048,15 +1048,15 @@ export default function SpaLanding() {
               
               <div className="flex gap-10 mt-12">
                 <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <div className="font-serif text-4xl md:text-5xl font-normal gold-gradient-text">7</div>
+                  <div className="font-serif text-4xl md:text-5xl font-normal rose-gold-gradient-text">7</div>
                   <div className="text-[10px] tracking-[2px] mt-2 uppercase text-white/50 font-semibold">PRIVATE SUITES</div>
                 </motion.div>
                 <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 300, delay: 0.1 }}>
-                  <div className="font-serif text-4xl md:text-5xl font-normal gold-gradient-text">14</div>
+                  <div className="font-serif text-4xl md:text-5xl font-normal rose-gold-gradient-text">14</div>
                   <div className="text-[10px] tracking-[2px] mt-2 uppercase text-white/50 font-semibold">CERTIFIED THERAPISTS</div>
                 </motion.div>
                 <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 300, delay: 0.2 }}>
-                  <div className="font-serif text-4xl md:text-5xl font-normal gold-gradient-text">98%</div>
+                  <div className="font-serif text-4xl md:text-5xl font-normal rose-gold-gradient-text">98%</div>
                   <div className="text-[10px] tracking-[2px] mt-2 uppercase text-white/50 font-semibold">REPEAT CLIENTS</div>
                 </motion.div>
               </div>
@@ -1073,14 +1073,14 @@ export default function SpaLanding() {
           >
             <motion.div 
               whileHover={{ scale: 1.02 }}
-              className="glass-card p-8 rounded-3xl border border-[#D4AF37]/20 relative overflow-hidden transition-all duration-300"
+              className="glass-card p-8 rounded-3xl border border-[#D48FB1]/20 relative overflow-hidden transition-all duration-300"
             >
-              <div className="text-[#D4AF37] mb-6">
-                <Star className="w-8 h-8 fill-[#D4AF37]" />
+              <div className="text-[#D48FB1] mb-6">
+                <Star className="w-8 h-8 fill-[#D48FB1]" />
               </div>
-              <div className="font-serif italic text-lg leading-relaxed text-white/90">"The most professional and relaxing experience I have had in Kerala. The therapists are highly skilled and respectful. I felt completely at ease."</div>
+              <div className="font-serif italic text-lg leading-relaxed text-white/90">&quot;The most professional and relaxing experience I have had in Kerala. The therapists are highly skilled and respectful. I felt completely at ease.&quot;</div>
               <div className="flex gap-3 mt-10 text-sm">
-                <div className="w-8 h-px bg-[#D4AF37]/50 self-center"></div>
+                <div className="w-8 h-px bg-[#D48FB1]/50 self-center"></div>
                 <div>
                   <div className="font-semibold text-xs tracking-wider text-white">SHYAM SUNDER</div>
                   <div className="text-[10px] text-white/40 uppercase">Calicut • Visited 4 times</div>
@@ -1088,7 +1088,7 @@ export default function SpaLanding() {
               </div>
             </motion.div>
             
-            <div className="text-xs text-white/70 font-light border-l-2 border-[#D4AF37] pl-6 py-1 leading-relaxed">
+            <div className="text-xs text-white/70 font-light border-l-2 border-[#D48FB1] pl-6 py-1 leading-relaxed">
               Discretion and hygiene are our highest priorities. Every room is sanitized between sessions. All therapists are background checked and professionally trained.
             </div>
           </motion.div>
@@ -1096,8 +1096,8 @@ export default function SpaLanding() {
       </section>
 
       {/* TESTIMONIALS GRID */}
-      <section className="bg-gradient-to-b from-[#0A1A14] to-[#080B09] py-24 border-t border-white/5 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <section className="bg-gradient-to-b from-[#151018] to-[#0C0A0D] py-24 border-t border-white/5 relative overflow-hidden">
+<div className="max-w-6xl mx-auto px-6 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1105,8 +1105,8 @@ export default function SpaLanding() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <div className="gold-gradient-text text-xs tracking-[3px] uppercase font-semibold">TESTIMONIALS</div>
-            <div className="font-serif text-2xl md:text-4xl font-light mt-2">What our <span className="italic gold-gradient-text">guests say</span></div>
+            <div className="rose-gold-gradient-text text-xs tracking-[3px] uppercase font-semibold">TESTIMONIALS</div>
+            <div className="font-serif text-2xl md:text-4xl font-light mt-2">What our <span className="italic rose-gold-gradient-text">guests say</span></div>
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -1122,16 +1122,16 @@ export default function SpaLanding() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 whileHover={{ y: -10 }}
-                className="glass-card p-8 rounded-3xl border border-[#D4AF37]/15 transition-all duration-300"
+                className="glass-card p-8 rounded-3xl border border-[#D48FB1]/15 transition-all duration-300"
               >
-                <div className="text-4xl gold-gradient-text font-serif leading-none -mt-2 mb-4">“</div>
+                <div className="text-4xl rose-gold-gradient-text font-serif leading-none -mt-2 mb-4">“</div>
                 <p className="text-white/80 text-sm font-light leading-relaxed">{quote}</p>
                 <div className="h-px bg-white/10 my-6"></div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#D4AF37]/15 flex items-center justify-center text-xs text-[#D4AF37]">✦</div>
+                  <div className="w-8 h-8 rounded-full bg-[#D48FB1]/15 flex items-center justify-center text-xs text-[#D48FB1]">✦</div>
                   <div>
                     <div className="text-xs font-semibold text-white">Guest from Kozhikode</div>
-                    <div className="text-[#D4AF37] text-[10px]">★★★★★</div>
+                    <div className="text-[#D48FB1] text-[10px]">★★★★★</div>
                   </div>
                 </div>
               </motion.div>
@@ -1141,7 +1141,7 @@ export default function SpaLanding() {
       </section>
 
       {/* FINAL CTA */}
-      <div className="bg-[#080B09] py-20 text-center border-t border-[#D4AF37]/20">
+      <div className="bg-[#0C0A0D] py-20 text-center border-t border-[#D48FB1]/20">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -1149,12 +1149,12 @@ export default function SpaLanding() {
           transition={{ duration: 0.6 }}
           className="max-w-lg mx-auto px-6"
         >
-          <div className="gold-gradient-text text-xs mb-3 tracking-[2px] uppercase font-semibold">DON&apos;T WAIT. YOUR WELLNESS AWAITS.</div>
-          <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight leading-tight mb-8">Ready to feel <span className="italic gold-gradient-text">renewed?</span></h2>
+          <div className="rose-gold-gradient-text text-xs mb-3 tracking-[2px] uppercase font-semibold">DON&apos;T WAIT. YOUR WELLNESS AWAITS.</div>
+          <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight leading-tight mb-8">Ready to feel <span className="italic rose-gold-gradient-text">renewed?</span></h2>
           
           <button 
             onClick={scrollToBooking}
-            className="w-full md:w-auto mx-auto gold-gradient-bg text-[#080B09] hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] transition-all px-10 py-4 text-base rounded-2xl flex items-center justify-center gap-3 group cursor-pointer font-semibold"
+            className="w-full md:w-auto mx-auto rose-gold-gradient-bg text-[#0C0A0D] hover:shadow-[0_0_35px_rgba(212,143,176,0.4)] transition-all px-10 py-4 text-base rounded-2xl flex items-center justify-center gap-3 group cursor-pointer font-semibold"
           >
             START YOUR BOOKING
             <motion.div 
@@ -1171,11 +1171,11 @@ export default function SpaLanding() {
       </div>
 
       {/* FOOTER */}
-      <footer className="bg-[#0A2E23] pt-20 pb-12 text-white/60 text-sm">
+      <footer className="bg-[#1A1518] pt-20 pb-12 text-white/60 text-sm">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-12 gap-y-16">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-6">
-              <div className="text-[#D4AF37]">
+              <div className="text-[#D48FB1]">
                 <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="5" r="2.5" fill="currentColor" stroke="none" />
                   <path d="M12 9c-3.5 0-5 3.5-5 6 0 2.5 1.5 4 1.5 6 0 1-1 2-1 2" />
@@ -1229,7 +1229,7 @@ export default function SpaLanding() {
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-11 h-11 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#E1306C] hover:text-white hover:border-[#E1306C] transition-all hover:scale-110 shadow-[0_0_15px_rgba(212,175,55,0.15)] group"
+                className="w-11 h-11 rounded-2xl bg-[#D48FB1]/10 border border-[#D48FB1]/30 flex items-center justify-center text-[#D48FB1] hover:bg-[#E1306C] hover:text-white hover:border-[#E1306C] transition-all hover:scale-110 shadow-[0_0_15px_rgba(212,143,176,0.15)] group"
                 aria-label="Instagram"
                 title="Instagram"
               >
@@ -1243,7 +1243,7 @@ export default function SpaLanding() {
                 href="https://wa.me/918086777555" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-11 h-11 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all hover:scale-110 shadow-[0_0_15px_rgba(212,175,55,0.15)] group"
+                className="w-11 h-11 rounded-2xl bg-[#D48FB1]/10 border border-[#D48FB1]/30 flex items-center justify-center text-[#D48FB1] hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all hover:scale-110 shadow-[0_0_15px_rgba(212,143,176,0.15)] group"
                 aria-label="WhatsApp"
                 title="WhatsApp"
               >
@@ -1257,7 +1257,7 @@ export default function SpaLanding() {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-11 h-11 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all hover:scale-110 shadow-[0_0_15px_rgba(212,175,55,0.15)] group"
+                className="w-11 h-11 rounded-2xl bg-[#D48FB1]/10 border border-[#D48FB1]/30 flex items-center justify-center text-[#D48FB1] hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all hover:scale-110 shadow-[0_0_15px_rgba(212,143,176,0.15)] group"
                 aria-label="Facebook"
                 title="Facebook"
               >
@@ -1280,10 +1280,10 @@ export default function SpaLanding() {
               initial={{ opacity: 0, scale: 0.88 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="modal bg-[#121212] max-w-md w-full rounded-3xl p-10 border border-[#D4AF37]/30 text-center"
+              className="modal bg-[#121212] max-w-md w-full rounded-3xl p-10 border border-[#D48FB1]/30 text-center"
             >
-              <div className="w-20 h-20 mx-auto mb-8 rounded-full border-4 border-[#D4AF37] flex items-center justify-center">
-                <CheckCircle2 className="w-12 h-12 text-[#D4AF37]" />
+              <div className="w-20 h-20 mx-auto mb-8 rounded-full border-4 border-[#D48FB1] flex items-center justify-center">
+                <CheckCircle2 className="w-12 h-12 text-[#D48FB1]" />
               </div>
               
               <div className="text-3xl font-light tracking-tight mb-3">Thank you, {formData.name.split(' ')[0]}!</div>

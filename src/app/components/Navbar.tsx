@@ -27,28 +27,28 @@ export default function Navbar() {
       />
 
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#080B09]/85 backdrop-blur-xl border-b border-[#D4AF37]/20 transition-all">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0C0A0D]/85 backdrop-blur-xl border-b border-[#D48FB1]/20 transition-all">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 gold-gradient-bg rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-              <Flower2 className="w-5 h-5 text-[#080B09]" />
+            <div className="w-10 h-10 rose-gold-gradient-bg rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(212,143,176,0.3)]">
+              <Flower2 className="w-5 h-5 text-[#0C0A0D]" />
             </div>
             <div>
-              <div className="font-serif text-2xl tracking-wide gold-gradient-text font-medium">ME2SPA</div>
-              <div className="text-[9px] text-[#D4AF37]/80 tracking-[2px] -mt-1 uppercase">LUXURY THERAPY & WELLNESS</div>
+              <div className="font-serif text-2xl tracking-wide rose-gold-gradient-text font-medium">ME2SPA</div>
+              <div className="text-[9px] text-[#D48FB1]/80 tracking-[2px] -mt-1 uppercase">LUXURY THERAPY & WELLNESS</div>
             </div>
           </Link>
           
           <div className="hidden md:flex items-center gap-10 text-xs font-medium uppercase tracking-[2.5px]">
-            <Link href="/#services" className="nav-link text-white/80 hover:text-[#D4AF37] transition-colors">Experiences</Link>
-            <Link href="/#about" className="nav-link text-white/80 hover:text-[#D4AF37] transition-colors">Our Sanctuary</Link>
-            <Link href="/contact" className="nav-link text-white/80 hover:text-[#D4AF37] transition-colors">Contact</Link>
-            <Link href="/premium" className="nav-link text-white/80 hover:text-[#D4AF37] transition-colors">Premium</Link>
+            <Link href="/#services" className="nav-link text-white/80 hover:text-[#D48FB1] transition-colors">Experiences</Link>
+            <Link href="/#about" className="nav-link text-white/80 hover:text-[#D48FB1] transition-colors">Our Sanctuary</Link>
+            <Link href="/contact" className="nav-link text-white/80 hover:text-[#D48FB1] transition-colors">Contact</Link>
+            <Link href="/premium" className="nav-link text-white/80 hover:text-[#D48FB1] transition-colors">Premium</Link>
           </div>
           
           <Link 
             href="/#booking-wizard" 
-            className="px-7 py-3 gold-gradient-bg text-[#080B09] font-semibold text-xs tracking-widest transition-all rounded-full flex items-center gap-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] hover:scale-[1.03] active:scale-[0.985]"
+            className="px-7 py-3 rose-gold-gradient-bg text-[#0C0A0D] font-semibold text-xs tracking-widest transition-all rounded-full flex items-center gap-2 hover:shadow-[0_0_30px_rgba(212,143,176,0.5)] hover:scale-[1.03] active:scale-[0.985]"
           >
             RESERVE <ArrowRight className="w-3.5 h-3.5" />
           </Link>
