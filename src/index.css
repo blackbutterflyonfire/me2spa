@@ -20,6 +20,11 @@
   letter-spacing: -0.015em;
 }
 
+.font-bodoni {
+  font-family: 'Bodoni Moda', Didot, 'Bodoni MT', 'Playfair Display', Georgia, serif;
+  font-optical-sizing: auto;
+}
+
 .gold-gradient-text {
   background: linear-gradient(135deg, #FFF5DA 0%, #ECC47A 45%, #C99039 80%, #9C651A 100%);
   -webkit-background-clip: text;

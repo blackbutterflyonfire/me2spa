@@ -5,6 +5,8 @@ interface SpaVibeLogoProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   showTagline?: boolean;
   taglineText?: string;
+  nameType?: 'bodoni' | 'image';
+  brandText?: string;
   className?: string;
 }
 
@@ -13,6 +15,8 @@ export default function SpaVibeLogo({
   size = 'sm',
   showTagline = true,
   taglineText = 'LUXURY THERAPY & WELLNESS',
+  nameType = 'bodoni',
+  brandText = 'Spa Vibe',
   className = '',
 }: SpaVibeLogoProps) {
   // Graceful fallback states in case user uploads PNG or SVG in /public or /public/images
@@ -20,11 +24,12 @@ export default function SpaVibeLogo({
   const [nameSrc, setNameSrc] = useState('/images/spavibe-wordmark.png');
   const [combinedSrc, setCombinedSrc] = useState('/images/spavibe-logo.png');
 
-  // Height configurations with default aspect ratio preserved (w-auto object-contain)
+  // Size configurations preserving default natural aspect ratio
   const sizeConfig = {
     xs: {
       markH: 'h-6',
       nameH: 'h-4',
+      textSize: 'text-xl',
       combinedH: 'h-6',
       taglineSize: 'text-[7px] tracking-[1.5px]',
       gap: 'gap-2',
@@ -32,6 +37,7 @@ export default function SpaVibeLogo({
     sm: {
       markH: 'h-9 sm:h-10',
       nameH: 'h-7 sm:h-8',
+      textSize: 'text-2xl sm:text-[27px]',
       combinedH: 'h-9 sm:h-10',
       taglineSize: 'text-[8px] tracking-[2px]',
       gap: 'gap-3',
@@ -39,6 +45,7 @@ export default function SpaVibeLogo({
     md: {
       markH: 'h-12',
       nameH: 'h-9',
+      textSize: 'text-3xl',
       combinedH: 'h-12',
       taglineSize: 'text-[9px] tracking-[2.5px]',
       gap: 'gap-3.5',
@@ -46,6 +53,7 @@ export default function SpaVibeLogo({
     lg: {
       markH: 'h-16',
       nameH: 'h-11',
+      textSize: 'text-4xl',
       combinedH: 'h-16',
       taglineSize: 'text-[10px] tracking-[3px]',
       gap: 'gap-4',
@@ -53,6 +61,7 @@ export default function SpaVibeLogo({
     xl: {
       markH: 'h-24',
       nameH: 'h-16',
+      textSize: 'text-5xl md:text-6xl',
       combinedH: 'h-24',
       taglineSize: 'text-xs tracking-[3.5px]',
       gap: 'gap-5',
@@ -76,8 +85,27 @@ export default function SpaVibeLogo({
     />
   );
 
-  // 2. Brand Name (SpaVibe Typography Image with default aspect ratio)
-  const BrandNameImage = ({ customClass = '' }: { customClass?: string }) => (
+  // 2. Bodoni Moda Brand Name Typography
+  const BodoniBrandName = ({ customClass = '' }: { customClass?: string }) => (
+    <div className={`flex flex-col select-none justify-center leading-tight ${customClass}`}>
+      <span
+        className={`font-bodoni ${sizeConfig.textSize} font-normal tracking-[-0.015em] leading-none bg-gradient-to-r from-[#FFF5DA] via-[#ECC47A] to-[#C99039] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(212,175,55,0.25)]`}
+        style={{ fontFamily: "'Bodoni Moda', Didot, 'Playfair Display', Georgia, serif" }}
+      >
+        {brandText}
+      </span>
+      {showTagline && (
+        <span
+          className={`${sizeConfig.taglineSize} text-[#E5B86B]/80 font-medium uppercase font-sans tracking-[2px] mt-1`}
+        >
+          {taglineText}
+        </span>
+      )}
+    </div>
+  );
+
+  // 3. Image Brand Name (SpaVibe Typography Image with default aspect ratio)
+  const ImageBrandName = ({ customClass = '' }: { customClass?: string }) => (
     <div className={`flex flex-col select-none justify-center ${customClass}`}>
       <img
         src={nameSrc}
@@ -102,7 +130,7 @@ export default function SpaVibeLogo({
     </div>
   );
 
-  // 3. Combined Single Image (If user uploads a single image containing both mark & name)
+  // 4. Combined Single Image (If user uploads a single image containing both mark & name)
   const CombinedLogoImage = () => (
     <img
       src={combinedSrc}
@@ -128,14 +156,14 @@ export default function SpaVibeLogo({
   }
 
   if (variant === 'text') {
-    return <BrandNameImage />;
+    return nameType === 'bodoni' ? <BodoniBrandName /> : <ImageBrandName />;
   }
 
-  // Default 'full' variant: Mark Image + Name Image side-by-side with default aspect ratio
+  // Default 'full' variant: Mark Image + Brand Name
   return (
     <div className={`inline-flex items-center ${sizeConfig.gap} ${className}`}>
       <LogoMarkImage />
-      <BrandNameImage />
+      {nameType === 'bodoni' ? <BodoniBrandName /> : <ImageBrandName />}
     </div>
   );
 }
