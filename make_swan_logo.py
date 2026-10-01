@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+import subprocess
+
+svg_swan = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Liquid Satin Gold Gradients -->
     <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -129,4 +131,31 @@
     <path d="M 766 270 C 785 290, 812 320, 845 365 C 820 350, 790 320, 758 290 Z"
           fill="url(#goldEdge)" />
   </g>
-</svg>
+</svg>'''
+
+with open("public/images/spavibe-swan.svg", "w") as f:
+    f.write(svg_swan)
+
+# Generate transparent background 512x512 PNG using ffmpeg
+subprocess.run([
+    'ffmpeg', '-y', '-i', 'public/images/spavibe-swan.svg',
+    '-vf', 'scale=512:512', 'public/images/spavibe-swan.png'
+], check=True)
+
+# Generate 64x64 favicon.png
+subprocess.run([
+    'ffmpeg', '-y', '-i', 'public/images/spavibe-swan.svg',
+    '-vf', 'scale=64:64', 'public/favicon.png'
+], check=True)
+
+# Generate 32x32 favicon.ico
+subprocess.run([
+    'ffmpeg', '-y', '-i', 'public/images/spavibe-swan.svg',
+    '-vf', 'scale=32:32', 'public/favicon.ico'
+], check=True)
+
+# Also write to public/favicon.svg
+with open("public/favicon.svg", "w") as f:
+    f.write(svg_swan)
+
+print("Swan logo assets successfully created in SVG, PNG, and ICO formats!")
