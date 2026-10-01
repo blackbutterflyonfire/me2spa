@@ -5,7 +5,7 @@ interface SpaVibeLogoProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   showTagline?: boolean;
   taglineText?: string;
-  nameType?: 'bodoni' | 'image';
+  nameType?: 'image' | 'bodoni';
   brandText?: string;
   className?: string;
 }
@@ -15,16 +15,16 @@ export default function SpaVibeLogo({
   size = 'sm',
   showTagline = true,
   taglineText = 'LUXURY THERAPY & WELLNESS',
-  nameType = 'bodoni',
+  nameType = 'image',
   brandText = 'Spa Vibe',
   className = '',
 }: SpaVibeLogoProps) {
-  // Graceful fallback states in case user uploads PNG or SVG in /public or /public/images
+  // Image sources with robust fallbacks
   const [markSrc, setMarkSrc] = useState('/images/spavibe-swan.png');
   const [nameSrc, setNameSrc] = useState('/images/spavibe-wordmark.png');
   const [combinedSrc, setCombinedSrc] = useState('/images/spavibe-logo.png');
 
-  // Size configurations preserving default natural aspect ratio
+  // Height configurations with natural aspect ratio preserved (w-auto object-contain)
   const sizeConfig = {
     xs: {
       markH: 'h-6',
@@ -36,7 +36,7 @@ export default function SpaVibeLogo({
     },
     sm: {
       markH: 'h-9 sm:h-10',
-      nameH: 'h-7 sm:h-8',
+      nameH: 'h-6 sm:h-7',
       textSize: 'text-2xl sm:text-[27px]',
       combinedH: 'h-9 sm:h-10',
       taglineSize: 'text-[8px] tracking-[2px]',
@@ -44,7 +44,7 @@ export default function SpaVibeLogo({
     },
     md: {
       markH: 'h-12',
-      nameH: 'h-9',
+      nameH: 'h-8 sm:h-9',
       textSize: 'text-3xl',
       combinedH: 'h-12',
       taglineSize: 'text-[9px] tracking-[2.5px]',
@@ -85,7 +85,33 @@ export default function SpaVibeLogo({
     />
   );
 
-  // 2. Bodoni Moda Brand Name Typography
+  // 2. Website Name Image (The exact uploaded SpaVibe wordmark with default aspect ratio)
+  const ImageBrandName = ({ customClass = '' }: { customClass?: string }) => (
+    <div className={`flex flex-col select-none justify-center ${customClass}`}>
+      <img
+        src={nameSrc}
+        alt="SpaVibe Website Name"
+        referrerPolicy="no-referrer"
+        onError={() => {
+          if (nameSrc.endsWith('.png')) {
+            setNameSrc('/images/spavibe-wordmark.svg');
+          } else if (nameSrc.includes('/images/')) {
+            setNameSrc('/logo-name.png');
+          }
+        }}
+        className={`${sizeConfig.nameH} w-auto aspect-auto object-contain drop-shadow-[0_2px_10px_rgba(212,175,55,0.35)] transition-transform duration-200 hover:brightness-110`}
+      />
+      {showTagline && (
+        <span
+          className={`${sizeConfig.taglineSize} text-[#E5B86B]/80 font-medium uppercase font-sans tracking-[2px] mt-0.5`}
+        >
+          {taglineText}
+        </span>
+      )}
+    </div>
+  );
+
+  // 3. Optional Bodoni Moda Brand Name Typography
   const BodoniBrandName = ({ customClass = '' }: { customClass?: string }) => (
     <div className={`flex flex-col select-none justify-center leading-tight ${customClass}`}>
       <span
@@ -104,33 +130,7 @@ export default function SpaVibeLogo({
     </div>
   );
 
-  // 3. Image Brand Name (SpaVibe Typography Image with default aspect ratio)
-  const ImageBrandName = ({ customClass = '' }: { customClass?: string }) => (
-    <div className={`flex flex-col select-none justify-center ${customClass}`}>
-      <img
-        src={nameSrc}
-        alt="SpaVibe Brand Name"
-        referrerPolicy="no-referrer"
-        onError={() => {
-          if (nameSrc.endsWith('.png')) {
-            setNameSrc('/images/spavibe-wordmark.svg');
-          } else if (nameSrc.includes('/images/')) {
-            setNameSrc('/logo-name.png');
-          }
-        }}
-        className={`${sizeConfig.nameH} w-auto aspect-auto object-contain drop-shadow-[0_2px_10px_rgba(212,175,55,0.3)]`}
-      />
-      {showTagline && (
-        <span
-          className={`${sizeConfig.taglineSize} text-[#E5B86B]/80 font-medium uppercase font-sans tracking-[2px] mt-0.5`}
-        >
-          {taglineText}
-        </span>
-      )}
-    </div>
-  );
-
-  // 4. Combined Single Image (If user uploads a single image containing both mark & name)
+  // 4. Combined Single Logo Image
   const CombinedLogoImage = () => (
     <img
       src={combinedSrc}
@@ -156,14 +156,14 @@ export default function SpaVibeLogo({
   }
 
   if (variant === 'text') {
-    return nameType === 'bodoni' ? <BodoniBrandName /> : <ImageBrandName />;
+    return nameType === 'image' ? <ImageBrandName /> : <BodoniBrandName />;
   }
 
-  // Default 'full' variant: Mark Image + Brand Name
+  // Default 'full' variant: Mark Image + Website Name Image
   return (
     <div className={`inline-flex items-center ${sizeConfig.gap} ${className}`}>
       <LogoMarkImage />
-      {nameType === 'bodoni' ? <BodoniBrandName /> : <ImageBrandName />}
+      {nameType === 'image' ? <ImageBrandName /> : <BodoniBrandName />}
     </div>
   );
 }
