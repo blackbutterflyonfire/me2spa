@@ -1,0 +1,6 @@
+{
+  "name": "SPAVIBE - Luxury Massage & Wellness Sanctuary",
+  "description": "A luxury wellness destination offering personalized therapeutic massage services in Kozhikode, Kerala.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

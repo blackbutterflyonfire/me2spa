@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #f8f0f4;
+    background-color: #0c0a0d;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: 'Bodoni Moda', 'Italiana', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+.font-brand {
+  font-family: 'Italiana', 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+}
+
+.font-brand-display {
+  font-family: 'Italiana', 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF5DA 0%, #ECC47A 45%, #C99039 80%, #9C651A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-gold-gradient-text {
+  background: linear-gradient(135deg, #FFF3DF 0%, #F5C8C0 25%, #E2A66C 60%, #C48733 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-gold-gradient-bg {
+  background: linear-gradient(135deg, #FDE6B0 0%, #E2B363 50%, #B87E28 100%);
+}
+
+.glass-card {
+  background: rgba(12, 10, 13, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 143, 176, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 143, 176, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(212, 143, 176, 0.18), 0 0 20px rgba(212, 143, 176, 0.1);
+}
+
+.glow-rose {
+  text-shadow: 0 0 25px rgba(212, 143, 176, 0.4), 0 0 50px rgba(212, 143, 176, 0.2);
+}
+
+.selected {
+  border-color: #d48fb1 !important;
+  box-shadow: 0 0 25px rgba(212, 143, 176, 0.25), inset 0 0 15px rgba(212, 143, 176, 0.1);
+  background-color: rgba(212, 143, 176, 0.08) !important;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #d48fb1, #f5c8c0);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #d48fb1, #f5c8c0, #0c0a0d);
+  z-index: 100;
+  transition: width 0.1s;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f5e7b2 0%, #d4af37 50%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #e5c158 0%, #d4af37 50%, #b88d22 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0a0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a1e24;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 143, 176, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d48fb1;
+}
+
+/* Official Google Sign-In Button styles */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #747775;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  height: 44px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 18px;
+  position: relative;
+  text-align: center;
+  transition: background-color .218s, border-color .218s, box-shadow .218s, transform .15s;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.gsi-material-button:hover {
+  background-color: #f7f9fa;
+  border-color: #5f6368;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+.gsi-material-button:active {
+  background-color: #eeeeee;
+  transform: translateY(0);
+}
+.gsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gsi-material-button-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gsi-material-button-contents {
+  font-weight: 500;
+  color: #1f1f1f;
+  font-size: 14px;
+}
+
