@@ -49,8 +49,8 @@ export default function Navbar() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0C0A0D]/90 backdrop-blur-xl border-b border-[#D48FB1]/20 transition-all">
         <div className="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          <Link to="/" className="flex items-center group">
-            <SpaVibeLogo size="sm" showTagline={true} nameType="image" />
+          <Link to="/" className="flex items-center group py-0.5" aria-label="SPAVIBE Home">
+            <SpaVibeLogo size="sm" showTagline={true} nameType="bodoni" brandText="SpaVibe" />
           </Link>
 
           {/* Desktop Nav Links */}
