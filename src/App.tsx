@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import FloatingCTA from './components/FloatingCTA';
+import TawkChat from './components/TawkChat';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import PremiumPage from './pages/PremiumPage';
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
         <FloatingCTA />
+        <TawkChat />
       </div>
     </BrowserRouter>
   );

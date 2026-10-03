@@ -5,6 +5,7 @@ import {
   X,
   Send,
   CheckCircle2,
+  Bot,
 } from 'lucide-react';
 import { getAccessToken } from '../services/googleAuth';
 import {
@@ -238,6 +239,27 @@ export default function FloatingCTA() {
 
       {/* Floating Buttons Bar */}
       <div className="flex items-center gap-3">
+        {/* Floating Tawk.to / Concierge Chatbot Button */}
+        <button
+          type="button"
+          onClick={() => {
+            if (window.Tawk_API?.toggle) {
+              window.Tawk_API.toggle();
+            } else if (window.Tawk_API?.maximize) {
+              window.Tawk_API.maximize();
+            } else {
+              window.dispatchEvent(new CustomEvent('spavibe:open-chat'));
+            }
+          }}
+          className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#DFAC56] to-[#BA812D] text-[#0C0A0D] rounded-full shadow-[0_4px_20px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-transform cursor-pointer relative group"
+          title="Tawk.to Chat Bot / Concierge"
+          aria-label="Open live chat bot"
+        >
+          <Bot className="w-5 h-5 text-[#0C0A0D]" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 border-2 border-[#0C0A0D] rounded-full animate-ping" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 border-2 border-[#0C0A0D] rounded-full" />
+        </button>
+
         {/* Floating Call Button */}
         <a
           href={`tel:+91${conciergePhone}`}

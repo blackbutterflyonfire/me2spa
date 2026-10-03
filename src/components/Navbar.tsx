@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { ArrowRight, Menu, X, Crown } from 'lucide-react';
+import { ArrowRight, Menu, X, Crown, Bot } from 'lucide-react';
 import SpaVibeLogo from './SpaVibeLogo';
 
 export default function Navbar() {
@@ -83,7 +83,25 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => {
+                if (window.Tawk_API?.toggle) {
+                  window.Tawk_API.toggle();
+                } else if (window.Tawk_API?.maximize) {
+                  window.Tawk_API.maximize();
+                } else {
+                  window.dispatchEvent(new CustomEvent('spavibe:open-chat'));
+                }
+              }}
+              className="px-4 py-2.5 rounded-full border border-[#E5B86B]/30 hover:border-[#E5B86B] text-[#E5B86B] font-medium text-xs tracking-wider flex items-center gap-1.5 transition-all hover:bg-[#E5B86B]/10 cursor-pointer"
+              title="Open Chat Bot"
+            >
+              <Bot className="w-3.5 h-3.5" />
+              <span>CHAT BOT</span>
+            </button>
+
             <button
               type="button"
               onClick={() => handleNavClick('#booking-wizard')}
@@ -133,8 +151,26 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-white/80 hover:text-[#D48FB1]"
             >
-              PREMIUM
+              VIP Membership
             </Link>
+
+            <button 
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                if (window.Tawk_API?.toggle) {
+                  window.Tawk_API.toggle();
+                } else if (window.Tawk_API?.maximize) {
+                  window.Tawk_API.maximize();
+                } else {
+                  window.dispatchEvent(new CustomEvent('spavibe:open-chat'));
+                }
+              }} 
+              className="w-full py-2.5 rounded-xl border border-[#E5B86B]/40 text-[#E5B86B] font-medium text-xs tracking-wider flex items-center justify-center gap-2 hover:bg-[#E5B86B]/10 cursor-pointer"
+            >
+              <Bot className="w-4 h-4" />
+              <span>LIVE CHAT / TAWK BOT</span>
+            </button>
             <button
               type="button"
               onClick={() => handleNavClick('#booking-wizard')}
