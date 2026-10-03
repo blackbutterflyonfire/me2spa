@@ -56,7 +56,7 @@ export default function TawkChat() {
     return (
       import.meta.env.VITE_TAWK_WIDGET_ID ||
       localStorage.getItem('spavibe_tawk_widget_id') ||
-      'default'
+      '1k3vfu6cf'
     );
   });
 
@@ -155,14 +155,28 @@ export default function TawkChat() {
   // Save Settings handler
   const handleSaveSettings = (e: React.FormEvent) => {
     e.preventDefault();
-    const cleanPropId = tempPropertyId.trim();
-    const cleanWidId = tempWidgetId.trim() || 'default';
+    let cleanPropId = tempPropertyId.trim();
+    let cleanWidId = tempWidgetId.trim() || '1k3vfu6cf';
+
+    // If user pasted a full URL or script tag, extract property ID and widget ID
+    const urlMatch = cleanPropId.match(/(?:embed\.tawk\.to|tawk\.to\/chat)\/([a-f0-9]{24})\/([a-zA-Z0-9]+)/i);
+    if (urlMatch) {
+      cleanPropId = urlMatch[1];
+      cleanWidId = urlMatch[2];
+    } else {
+      const propMatch = cleanPropId.match(/[a-f0-9]{24}/i);
+      if (propMatch) {
+        cleanPropId = propMatch[0];
+      }
+    }
 
     localStorage.setItem('spavibe_tawk_property_id', cleanPropId);
     localStorage.setItem('spavibe_tawk_widget_id', cleanWidId);
 
     setPropertyId(cleanPropId);
     setWidgetId(cleanWidId);
+    setTempPropertyId(cleanPropId);
+    setTempWidgetId(cleanWidId);
 
     setSettingsSaved(true);
     setTimeout(() => {
